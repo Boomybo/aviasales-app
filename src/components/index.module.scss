@@ -1,0 +1,17 @@
+$white-color: #FFF;
+$light-gray: #E5E5E5;
+$blue-color:  #2196F3;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:wght@500;600&display=swap');
+
+@mixin mainText {
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+    
+}
+
+
+
+

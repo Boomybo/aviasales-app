@@ -1,0 +1,85 @@
+@import '../index.module.scss';
+
+.aside {
+    display: block;
+    height: 252px;
+    background-color: $white-color;
+    margin-right: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.stops-counter {
+    width: 192px;
+    @include mainText();
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    color: #4A4A4A;
+    margin: 20px 20px 10px;
+}
+
+input {
+    position: absolute;
+    appearance: none;
+}
+
+.check__box {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $blue-color;
+box-sizing: border-box;
+border-radius: 2px;
+margin-right: 10px;
+}
+
+.filter-label {
+    display: flex;
+    position: relative;
+    @include mainText();
+    font-size: 13px;
+    line-height: 20px;
+    width: 192px;
+    padding: 0 20px;
+}
+
+.check__box::after {
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.label-input:checked ~ .check__box:after {
+    display: block;
+}
+
+.filter-label .check__box::after{
+    position: absolute;
+    left: 27px;
+    top:3px;
+    width: 6px;
+    height: 10px;
+    border-bottom: 1px solid $blue-color;
+    border-right: 1px solid $blue-color;
+    transform: rotate(45deg);
+}
+
+
+.filter {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.filter:hover {
+    background-color: #F1FCFF;
+}
+
+@media screen and (max-width: 1100px) {
+    .aside {
+        margin: auto;
+    }
+}

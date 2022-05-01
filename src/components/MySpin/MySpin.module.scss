@@ -1,0 +1,15 @@
+@import '../index.module.scss';
+
+.loader-container {
+    width: 192px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.loader-text {
+    @include mainText()
+}
