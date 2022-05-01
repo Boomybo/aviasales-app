@@ -1,11 +1,10 @@
 import React from 'react';
-
 import { connect } from 'react-redux';
+import { Spin } from 'antd';
 
-import { Spin } from 'antd'
-import Ticket from "../Ticket/Ticket";
-import { setTicketsWithFilter, sorted, spin } from "../../helpers";
-import * as actions from '../../actions/actions'
+import Ticket from '../Ticket/Ticket';
+import { setTicketsWithFilter, sorted } from '../../helpers';
+import * as actions from '../../actions/actions';
 import 'antd/dist/antd.css';
 import styles from '../Tickets/Tickets.module.scss';
 
@@ -35,7 +34,8 @@ const Tickets = ({ receiveTickets, setVisibleTickets, visibleTickets, filterRedu
       threeTransfers,
       ticketsWithFilter,
       oneTicket
-  )});
+    );
+  });
 
   sorted(sortButton, elements);
 
