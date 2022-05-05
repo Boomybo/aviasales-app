@@ -1,5 +1,4 @@
-@import '../index.module.scss';
-
+@import '../../index.module.scss';
 .aside {
     display: block;
     height: 252px;
@@ -44,6 +43,7 @@ margin-right: 10px;
     line-height: 20px;
     width: 192px;
     padding: 0 20px;
+    cursor: pointer;
 }
 
 .check__box::after {

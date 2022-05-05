@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import 'antd/dist/antd.css';
 import icon from '../../img/Logo (1).svg';
 import TransferFilter from '../TransferFilter/TransferFilter';
 import RecommendationFilter from '../RecommendationFilter/RecommendationFilter';

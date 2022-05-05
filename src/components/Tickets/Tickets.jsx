@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Spin } from 'antd';
 
 import Ticket from '../Ticket/Ticket';
+import MySpin from '../MySpin/MySpin';
 import { setTicketsWithFilter, sorted } from '../../helpers';
 import * as actions from '../../actions/actions';
-import 'antd/dist/antd.css';
 import styles from '../Tickets/Tickets.module.scss';
 
 let startArray = 0;
@@ -44,41 +43,49 @@ const Tickets = ({ receiveTickets, setVisibleTickets, visibleTickets, filterRedu
     return (startArray += 5);
   };
 
-  const loading = receiveTickets.length === 0 ? <Spins /> : elements;
+  const loading = receiveTickets.length === 0 ? <MySpin /> : elements;
 
-  const newElem = !withoutTransfer && !oneTransfer && !twoTransfers && !threeTransfers ? <NothingWasFound /> : loading;
+  const newElem =
+    !withoutTransfer && !oneTransfer && !twoTransfers && !threeTransfers ? <MyError flag={true} /> : loading;
 
-  const errs = error ? <MyError /> : newElem;
+  const errs = error ? <MyError flag={false} /> : newElem;
+
+  let moreBtn;
+  if (
+    (!withoutTransfer && !oneTransfer && !twoTransfers && !threeTransfers) ||
+    receiveTickets.length === visibleTickets.length
+  ) {
+    moreBtn = null;
+  } else {
+    moreBtn = <MoreBtn visibleElem={visibleElem} />;
+  }
 
   return (
     <ul className={styles.cards}>
       {errs}
-      <li className={styles['card-more-btn']}>
-        <button className={styles['more-btn']} onClick={visibleElem}>
-          Показать еще билеты
-        </button>
-      </li>
+      {moreBtn}
     </ul>
   );
 };
 
-const NothingWasFound = () => {
+const MoreBtn = ({ visibleElem }) => {
   return (
-    <div className={styles.message}>
-      <p>По вашему запросу ничего не было найдено</p>
-    </div>
+    <li className={styles['card-more-btn']}>
+      <button className={styles['more-btn']} onClick={visibleElem}>
+        Показать еще билеты
+      </button>
+    </li>
   );
 };
 
-const Spins = () => {
-  return (
-    <div className={styles['container-spin']}>
-      <Spin size="large" className={styles.spin} />
-    </div>
-  );
-};
-
-const MyError = () => {
+const MyError = ({ flag }) => {
+  if (flag) {
+    return (
+      <div className={styles.message}>
+        <p>По вашему запросу ничего не было найдено</p>
+      </div>
+    );
+  }
   return (
     <div className={styles.message}>
       <p>Something get wrong. Try to reload page</p>

@@ -1,5 +1,4 @@
-@import '../index.module.scss';
-
+@import '../../index.module.scss';
 .more-btn {
     display: flex;
     justify-content: center;
@@ -20,6 +19,7 @@ text-transform: uppercase;
 /* Primary Colors/White */
 
 color: #FFFFFF;
+cursor: pointer;
 }
 
 .container-spin {
