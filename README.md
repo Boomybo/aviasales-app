@@ -1,2 +1,2 @@
-# https://aviasales-kata-boomybo.vercel.app/
+# https://aviasales-kata-boomybo.vercel.app
 
