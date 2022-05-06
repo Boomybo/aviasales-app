@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.20.1",
     "babel-eslint": "^10.1.0",
+    "classnames": "^2.3.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
@@ -28,8 +29,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --debug src/",
-    "lint:fix": "eslint --debug src/ --fix",
+    "lint": "eslint --ext .jsx,.js .",
+    "lint:fix": "eslint --fix --ext .jsx,.js .",
     "prettier": "prettier --write src/**/*.js",
     "lint-staged": "lint-staged"
   },

@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 const initialState = {
   allCheck: true,
   filters: [
@@ -66,69 +65,4 @@ function filterReducer(state = initialState, action) {
   }
 }
 
-function sortButton(state = null, action) {
-  switch (action.type) {
-    case 'SET_SORT_BUTTON':
-      return (state = action.value);
-
-    default:
-      return state;
-  }
-}
-
-function error(state = false, action) {
-  switch (action.type) {
-    case 'RECEIVE_ERROR':
-      return (state = action.err);
-    default:
-      return state;
-  }
-}
-
-function receiveId(state = null, action) {
-  switch (action.type) {
-    case 'RECEIVE_ID':
-      return (state = action.id);
-    default:
-      return state;
-  }
-}
-
-function receiveTickets(state = [], action) {
-  switch (action.type) {
-    case 'RECEIVED_TICKETS':
-      return [...state, ...action.json];
-    default:
-      return state;
-  }
-}
-
-function visibleTickets(state = [], action) {
-  switch (action.type) {
-    case 'VISIBLE_TICKETS':
-      return [...state, ...action.visibleTickets];
-    default:
-      return state;
-  }
-}
-
-function loader(state = null, action) {
-  switch (action.type) {
-    case 'LOADER':
-      return action.loader;
-    default:
-      return state;
-  }
-}
-
-const rootReducer = combineReducers({
-  filterReducer,
-  sortButton,
-  error,
-  receiveId,
-  receiveTickets,
-  visibleTickets,
-  loader,
-});
-
-export default rootReducer;
+export default filterReducer;

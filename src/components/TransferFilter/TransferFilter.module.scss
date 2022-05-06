@@ -1,4 +1,4 @@
-@import '../../index.module.scss';
+@import '../../index.scss';
 .aside {
     display: block;
     height: 252px;
@@ -15,7 +15,6 @@
     line-height: 12px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-
     color: #4A4A4A;
     margin: 20px 20px 10px;
 }
@@ -30,9 +29,9 @@ input {
     width: 20px;
     height: 20px;
     border: 1px solid $blue-color;
-box-sizing: border-box;
-border-radius: 2px;
-margin-right: 10px;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin-right: 10px;
 }
 
 .filter-label {

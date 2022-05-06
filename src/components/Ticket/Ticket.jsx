@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { getPrice, getDate, inRoute, getNumberOfTransfers, setTransfers } from '../../helpers';
-import styles from '../Ticket/Ticket.module.scss';
+import { getPrice, getDate, inRoute, getNumberOfTransfers, setTransfers } from '../../utils/helpers';
+
+import styles from './Ticket.module.scss';
 
 const Ticket = ({ price, carrier, segments }) => {
   return (

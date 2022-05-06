@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import * as actions from '../../actions/actions';
-import styles from '../TransferFilter/TransferFilter.module.scss';
-import MySpin from '../MySpin/MySpin';
+import MySpin from '../MySpin';
+
+import styles from './TransferFilter.module.scss';
 
 const TransferFilter = ({ filterReducer, addTransferFilter, deleteTransferFilter, allFilterChecked, checkAll }) => {
   const { allCheck, filters } = filterReducer;

@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import 'antd/dist/antd.css';
+
 import icon from '../../img/Logo (1).svg';
-import TransferFilter from '../TransferFilter/TransferFilter';
-import RecommendationFilter from '../RecommendationFilter/RecommendationFilter';
-import Tickets from '../Tickets/Tickets';
-import styles from '../App/App.module.scss';
+import TransferFilter from '../TransferFilter';
+import RecommendationFilter from '../RecommendationFilter';
+import Tickets from '../Tickets';
 import * as actions from '../../actions/actions';
+
+import styles from './App.module.scss';
 
 const App = () => {
   return (

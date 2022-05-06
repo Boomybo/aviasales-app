@@ -2,8 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Spin } from 'antd';
 
-import styles from '../MySpin/MySpin.module.scss';
 import * as actions from '../../actions/actions';
+
+import styles from './MySpin.module.scss';
 
 const MySpin = ({ loader }) => {
   const load = !loader ? (

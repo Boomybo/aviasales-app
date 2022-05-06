@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import Ticket from '../Ticket/Ticket';
-import MySpin from '../MySpin/MySpin';
-import { setTicketsWithFilter, sorted } from '../../helpers';
+import Ticket from '../Ticket';
+import MySpin from '../MySpin';
+import { setTicketsWithFilter, sorted } from '../../utils/helpers';
 import * as actions from '../../actions/actions';
-import styles from '../Tickets/Tickets.module.scss';
+
+import styles from './Tickets.module.scss';
 
 let startArray = 0;
 
